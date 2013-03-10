@@ -15,7 +15,7 @@ a {
   color:#fff;
   padding-bottom:.5em;
   border-bottom:.15em solid #fff;
-  @include transition(all .25s ease-in-out);
+  @include transition(color .25s ease-in-out, border-bottom .25s ease-in-out);
 
   &:hover {
     color:#000;
