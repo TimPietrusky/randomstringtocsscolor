@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>random string to css color</title>
+
+    <meta charset="utf-8">
+    <meta name="author" content="Tim Pietrusky">
+    <meta name="robots" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    <meta name="description" content="Convert any shit String into a hex/rgba color. That's all.">
+
+    <meta property="og:title" content="random string to css color">
+    <meta property="og:description" content="Convert any shit String into a hex/rgba color. That's all.">
+    <meta property="og:image" content="randomstringtocsscolor.com/img/browserhacks_200.jpg">
+    <meta property="og:url" content="randomstringtocsscolor.com">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/randomstringtocsscolor.ico" type="image/x-icon">
+</head>
+
+<body>
+  <article>
+  <input spellcheck="false" placeholder="randomstringtocsscolor.com"></input>
+  <div class="output"></div>
+  <div class="output rgba"></div>
+ 
+  <section>
+    <h1>random string to css color</h1>
+    <p>
+      2013 by <a href="http://twitter.com/TimPietrusky" target="_blank">@TimPietrusky</a></p>
+    
+    <p>
+    <a href="http://randomstringtocsscolor.com" target="_blank">randomstringtocsscolor.com</a></p>
+  </section>
+
+
+  <section>
+    <h2>How does this work?</h2>
+    <ol>
+      <li>Change each non-hex character to a 0.</li>
+      <li>Add 0's to the string until its length is a multiple of 3.</li>
+      <li>Divide string into 3 equal parts.</li>
+      <li>While the length of the sub-strings is greater than 2, and all three of the sub-strings begin with a 0, remove the leading 0s from each string.</li>
+      <li>If the length of the sub-strings is still greater than 2, then truncate each substring to 2 characters.</li>
+    </ol>  
+  </section>
+<article>  
+
+<script src="js/main.js"></script>
+  
+</body>
+</html>
