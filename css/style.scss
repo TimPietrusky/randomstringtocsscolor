@@ -1,4 +1,5 @@
 @import "compass/css3";
+@import "helpers";
 
 * {
   @include box-sizing(border-box);
@@ -8,6 +9,11 @@ body {
   margin:1em;
   font:1em sans-serif;
   color:#fff;
+  @include transition(background-color .15s ease-in-out);
+
+  @include breakpoint(baby-bear) {
+    margin: 1em 0;
+  }
 }
 
 a {
@@ -16,6 +22,11 @@ a {
   padding-bottom:.5em;
   border-bottom:.15em solid #fff;
   @include transition(color .25s ease-in-out, border-bottom .25s ease-in-out);
+
+  @include breakpoint(baby-bear) {
+    line-height:1.65em;
+    padding-bottom:.15em;
+  }
 
   &:hover {
     color:#000;
@@ -30,6 +41,12 @@ h1 {
 article {
   width:80%;
   margin:5em auto 0 auto;
+
+  @include breakpoint(baby-bear) {
+    width:100%;
+    margin: 2em auto 0 auto;
+    padding:0 .5em;
+  }
   
   input {
     width:100%;
@@ -41,7 +58,11 @@ article {
     background:rgba(0, 0, 0, .7);
     color:#fff;
     outline:0;
-    @include transition(outline .3s ease-in-out);
+    @include transition(outline .3s ease-in-out, box-shadow .2s ease-in-out);
+
+    @include breakpoint(baby-bear) {
+      font-size:2em;
+    }
     
     &:focus {
       outline:.15em solid rgba(0, 0, 0, .2);
