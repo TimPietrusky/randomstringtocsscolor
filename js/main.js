@@ -8,6 +8,7 @@
   # 2013 by Tim Pietrusky
   # timpietrusky.com
 **/
+
 var output = document.querySelector('.output'),
     output_rgba = document.querySelector('.output.rgba'),
     input = document.querySelector('input'),
@@ -62,9 +63,9 @@ input.addEventListener('keyup', function(e) {
     
     // Add element if color consists of just 1 char per color
     if (result[1].length == 1) {
-      result[1] += 0;
-      result[3] += 0;
-      result[5] += 0;
+      result[1] += result[1];
+      result[3] += result[3];
+      result[5] += result[5];
     }
  
     // Output
