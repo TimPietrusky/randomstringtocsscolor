@@ -49,7 +49,7 @@ input.addEventListener('keyup', function(e) {
   
     // Remove first 0 (if there is one at first postion of every group
     if (result[1].length > 2) {
-      if (result[1].charAt(0) == result[3].charAt(0) == result[5].charAt(0) == 0) {
+      if (result[1].charAt(0) == result[3].charAt(0) == result[5].charAt(0) === '0') {
         result[1] = result[1].substr(1);
         result[3] = result[3].substr(1);
         result[5] = result[5].substr(1);
