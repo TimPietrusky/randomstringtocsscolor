@@ -93,7 +93,6 @@ function main(){
     output_rgba.innerText = 'rgba('+r+','+g+','+b+',.8)';
     
   } catch(e) {
-    console.log("error", e);
     body.setAttribute('style', 'background-color:none');
     output.innerText = output_rgba.innerText = "";
   }
