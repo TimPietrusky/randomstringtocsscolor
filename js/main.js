@@ -9,14 +9,27 @@
   # timpietrusky.com
 **/
 
+
+
 var output = document.querySelector('.output'),
     output_rgba = document.querySelector('.output.rgba'),
     input = document.querySelector('input'),
-    body = document.body;
+    body = document.body,
+    hash = window.location.hash.replace("#","");
 
-// Listen to keyup
-input.addEventListener('keyup', function(e) {
-  var value = this.value,
+
+if (hash){
+  input.value = hash;
+  main();
+  input.focus();
+}
+
+
+input.addEventListener('keyup', main);
+
+function main(){
+  
+  var value = input.value,
       result = "";
   
   try {
@@ -80,7 +93,8 @@ input.addEventListener('keyup', function(e) {
     output_rgba.innerText = 'rgba('+r+','+g+','+b+',.8)';
     
   } catch(e) {
+    console.log("error", e);
     body.setAttribute('style', 'background-color:none');
     output.innerText = output_rgba.innerText = "";
   }
-});
+}
